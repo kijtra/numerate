@@ -1,2 +1,2 @@
-このリポジトリは使わないでください
+このリポジトリは使わないでください  
 do not use this repository
