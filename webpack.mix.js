@@ -4,10 +4,10 @@ const mix = require('laravel-mix')
 mix.config.vue.esModule = true
 
 mix
-    .js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+    .js('resources/js/app.js', 'docs/js')
+    .sass('resources/sass/app.scss', 'docs/css')
     .setPublicPath('docs')
-    .version()
+    // .version()
     .sourceMaps()
     .disableNotifications()
     .webpackConfig({

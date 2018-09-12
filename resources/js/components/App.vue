@@ -16,5 +16,9 @@ export default {
       titleTemplate: `%s · ${appName}`
     }
   },
+
+  created() {
+      this.$store.dispatch('items/init')
+  }
 }
 </script>
