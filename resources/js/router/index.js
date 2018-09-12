@@ -29,8 +29,8 @@ export default router
  */
 function createRouter () {
   const router = new Router({
-    scrollBehavior,
-    mode: 'history',
+    // scrollBehavior,
+    // mode: 'history',
     routes
   })
 
@@ -154,23 +154,23 @@ function getMiddleware (components) {
  * @param  {Object|undefined} savedPosition
  * @return {Object}
  */
-function scrollBehavior (to, from, savedPosition) {
-  if (savedPosition) {
-    return savedPosition
-  }
+// function scrollBehavior (to, from, savedPosition) {
+//   if (savedPosition) {
+//     return savedPosition
+//   }
 
-  if (to.hash) {
-    return { selector: to.hash }
-  }
+//   if (to.hash) {
+//     return { selector: to.hash }
+//   }
 
-  const [component] = router.getMatchedComponents({ ...to }).slice(-1)
+//   const [component] = router.getMatchedComponents({ ...to }).slice(-1)
 
-  if (component && component.scrollToTop === false) {
-    return {}
-  }
+//   if (component && component.scrollToTop === false) {
+//     return {}
+//   }
 
-  return { x: 0, y: 0 }
-}
+//   return { x: 0, y: 0 }
+// }
 
 /**
  * @param  {Object} requireContext

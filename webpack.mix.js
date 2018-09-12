@@ -19,7 +19,7 @@ mix
         },
         output: {
             chunkFilename: 'js/[name].[chunkhash].js',
-            publicPath: mix.config.hmr ? '//localhost:8080' : '/'
+            publicPath: mix.config.hmr ? '//localhost:8080' : './'
         }
     })
     .options({
