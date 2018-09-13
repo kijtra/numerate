@@ -29,6 +29,7 @@ export default router
  */
 function createRouter () {
   const router = new Router({
+    base: '/numerate/',
     scrollBehavior,
     mode: 'history',
     routes
