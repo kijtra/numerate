@@ -1,4 +1,4 @@
-import './axios'
+// import './axios'
 // import './localstorage'
 // import './persistedstate'
-require('./nprogress').load();
+// require('./nprogress').load();

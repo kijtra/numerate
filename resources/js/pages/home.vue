@@ -5,6 +5,8 @@
         </div>
         <hr>
         <button @click.prevent="add()">add</button>
+        <hr>
+        <router-link :to="{name:'test'}">test</router-link>
     </div>
 </template>
 

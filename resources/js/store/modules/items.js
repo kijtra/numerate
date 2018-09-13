@@ -1,5 +1,5 @@
 import * as types from '../mutation-types'
-import db from '~/db'
+import db from '~/plugins/dexie'
 
 // state
 export const state = {
