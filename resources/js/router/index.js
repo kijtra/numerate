@@ -29,7 +29,7 @@ export default router
  */
 function createRouter () {
   const router = new Router({
-    base: '/numerate/',
+    base: location.pathname.indexOf('/numerate') !== -1 ? '/numerate/' : '/',
     scrollBehavior,
     mode: 'history',
     routes
