@@ -4,5 +4,11 @@
     "/js/vendor.js": "/js/vendor.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/js/manifest.js": "/js/manifest.js"
+    "/js/manifest.js": "/js/manifest.js",
+    "/js/lang-ja.9c6dd69da8801801e025.js": "/js/lang-ja.9c6dd69da8801801e025.js",
+    "/js/lang-en.32376af65074e0cf51fc.js": "/js/lang-en.32376af65074e0cf51fc.js",
+    "/js/lang-ja.92428ac2a70dbaf0edbf.js": "/js/lang-ja.92428ac2a70dbaf0edbf.js",
+    "/js/lang-ja.615d28c45575da7980f5.js": "/js/lang-ja.615d28c45575da7980f5.js",
+    "/js/lang-ja.b83b9e1ae494842a5af2.js": "/js/lang-ja.b83b9e1ae494842a5af2.js",
+    "/js/lang-ja.9da575f71ed59e583113.js": "/js/lang-ja.9da575f71ed59e583113.js"
 }

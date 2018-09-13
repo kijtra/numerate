@@ -18,34 +18,40 @@ export const mutations = {
     },
 
     [types.ADD_ITEM] (state, data) {
-        db.items.add(data)
-        this._vm.$set(state.all, data.id, data)
-        // state.items[data.id] = data
+        db.items.add(data).then(id => {
+            this._vm.$set(state.all, id, data)
+        })
     },
 
     [types.UPDATE_ITEM] (state, id, data) {
-        db.items.update(id, data)
-        this._vm.$set(state.all, data.id, data)
-        // state.items[data.id] = data
+        db.items.update(id, data).then(id => {
+            this._vm.$set(state.all, id, data)
+        })
     },
 
     [types.REMOVE_ITEM] (state, id) {
-        db.items.delete(id)
-        this._vm.$delete(state.all, id)
+        db.items.delete(id).then(() => {
+            this._vm.$delete(state.all, id)
+        })
     }
 }
 
 // actions
 export const actions = {
     init ({ state }) {
-        db.items.orderBy("id").each(item => {
+        db.items.orderBy('id').each(item => {
+            item.created_at = this._vm.$luxon.fromJSDate(item.created_at)
+            item.updated_at = this._vm.$luxon.fromJSDate(item.updated_at)
             this._vm.$set(state.all, item.id, item)
         })
     },
 
     add ({ commit }, data) {
-        if ('object' === typeof data && data.id) {
-            commit(types.ADD_ITEM, data)
+        if ('object' === typeof data) {
+            commit(types.ADD_ITEM, Object.assign({
+                created_at: new Date(),
+                updatedd_at: new Date()
+            }, data))
         } else {
             console.error('Invalid item')
         }
@@ -53,7 +59,9 @@ export const actions = {
 
     update ({ commit }, id, data) {
         if ('object' === typeof data && ('string' === typeof id || 'number' === typeof id)) {
-            commit(types.UPDATE_ITEM, id, data)
+            commit(types.UPDATE_ITEM, id, Object.assign({
+                updatedd_at: new Date()
+            }, data))
         } else {
             console.error('Invalid item')
         }

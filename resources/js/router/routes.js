@@ -4,6 +4,6 @@ const Home = () => import('~/pages/home').then(m => m.default || m)
 
 export default [
     { path: '/', name: 'welcome', component: Welcome },
-    { path: '/?home', name: 'home', component: Home },
+    { path: '/home', name: 'home', component: Home },
     { path: '*', component: NotFound }
 ]
